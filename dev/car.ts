@@ -1,13 +1,13 @@
 class Car {
     
     private element: HTMLElement
-    private posx:number
-    private posy:number
+    private posx: number
+    private posy: number
         
     constructor() {
 
-        this.element = document.createElement("car")
-        let foreground = document.getElementsByTagName("foreground")[0]
+        this.element    = document.createElement("car")
+        let foreground  = document.getElementsByTagName("foreground")[0]
         foreground.appendChild(this.element);
         
         this.posx = 100

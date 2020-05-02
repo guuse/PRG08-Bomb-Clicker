@@ -1,5 +1,7 @@
 # Bomb Clicker
 
+Klik op de bommen om te voorkomen dat de stad vernietigd wordt.
+
 Game basics met DOM elementen en de Game Loop.
 
 ## OPDRACHT
@@ -13,6 +15,10 @@ Voorbeeldcode : positie aanpassen
 ```
 this.div.style.transform=`translate(10px, 30px)`
 ```
+
+## OPDRACHT
+
+- Pas inheritance toe op de car en de bomb. Dit kun je doen met een abstracte class 'GameObject'. Op deze manier kun je afdwingen dat de child class bijvoorbeeld de functie 'update' moet hebben.
 
 ## OPDRACHT
 
@@ -55,10 +61,9 @@ this.bar.style.backgroundPositionX = "-72px"      // één kapot gebouw
 
 ## OPDRACHT
 
-- Plaats de docs map van de game online, bv. op github pages
+- Plaats de docs map van de game online, bv. op github pages (Project op Github > Settings > Scroll naar beneden 'Github Pages' > activate. Bij source select 'master branche /docs folder')
 - Voeg "touchstart" event listeners toe voor touchscreens
 - Test de game op je telefoon
 
-## OPDRACHT
+n.b. Als student heb je de mogelijkheid om een [Student Developer Pack](https://education.github.com/pack) aan te vragen. Hiermee krijg je toegang te heel wat tools en een gratis Github Pro account. 
 
-- Pas inheritance toe op de car en de bomb
