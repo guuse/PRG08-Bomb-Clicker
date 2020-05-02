@@ -1,6 +1,6 @@
 # Bomb Clicker
 
-Klik op de bommen om te voorkomen dat de stad vernietigd wordt.
+In [Bomb Clicker](https://hr-cmgt.github.io/PRG08-Week1-oefening1-completed/) klik je op de bommen om te voorkomen dat de stad vernietigd wordt.
 
 Game basics met DOM elementen en de Game Loop.
 
