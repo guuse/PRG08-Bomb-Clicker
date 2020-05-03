@@ -21,15 +21,21 @@ game * {
     background-repeat: no-repeat;
 }
 
-ui {
-    transform: translate(20px, 20px);
-    pointer-events: none;
-}
-
-car {
+car-component {
     width:224px; height:138px;
     background-image: url(../images/car.png);
     cursor: pointer;
+}
+
+bomb-component {
+    width:142px; height:224px;
+    background-image: url(../images/bomb.png);
+    cursor: pointer;
+}
+
+ui {
+    transform: translate(20px, 20px);
+    pointer-events: none;
 }
 
 bar {
@@ -47,27 +53,10 @@ textfield {
     transform: translateY(80px);
 }
 
-
-
-bomb {
-    width:142px; height:224px;
-    background-image: url(../images/bomb.png);
-    cursor: pointer;
-}
-
 cloud {
     background-image: url(../images/cloud.png);
     width:277px; height: 109px;
     animation: movecloud 8s linear infinite;
-}
-
-@keyframes movecloud {
-    from {
-        transform:translate(-30vw, 50px);
-    }
-    to {
-        transform:translate(100vw, 50px);   
-    }
 }
 
 explosion {
@@ -82,4 +71,13 @@ background {
     background-repeat: repeat-x;
     background-position: bottom;
 
+}
+
+@keyframes movecloud {
+    from {
+        transform:translate(-30vw, 50px);
+    }
+    to {
+        transform:translate(100vw, 50px);   
+    }
 }

@@ -1,19 +1,21 @@
-class Bomb {
+class Bomb extends HTMLElement{
     
-    private element: HTMLElement
     private posy: number
     private posx: number
         
     constructor() {
-        this.element    = document.createElement("bomb")
+        super()
+
         let foreground  = document.getElementsByTagName("foreground")[0]
-        foreground.appendChild(this.element);
+        foreground.appendChild(this);
         
         this.posy = 200
         this.posx = 220
     }
 
     public update():void {
-        this.element.style.transform = `translate(${this.posx}px, ${this.posy}px)`
+        this.style.transform = `translate(${this.posx}px, ${this.posy}px)`
     }
 }
+
+window.customElements.define("bomb-component", Bomb)

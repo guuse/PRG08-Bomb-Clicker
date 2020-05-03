@@ -1,55 +1,49 @@
 "use strict";
-var Bomb = (function () {
-    function Bomb() {
-        this.element = document.createElement("bomb");
-        var foreground = document.getElementsByTagName("foreground")[0];
-        foreground.appendChild(this.element);
+class Bomb extends HTMLElement {
+    constructor() {
+        super();
+        let foreground = document.getElementsByTagName("foreground")[0];
+        foreground.appendChild(this);
         this.posy = 200;
         this.posx = 220;
     }
-    Bomb.prototype.update = function () {
-        this.element.style.transform = "translate(" + this.posx + "px, " + this.posy + "px)";
-    };
-    return Bomb;
-}());
-var Car = (function () {
-    function Car() {
-        this.element = document.createElement("car");
-        var foreground = document.getElementsByTagName("foreground")[0];
-        foreground.appendChild(this.element);
+    update() {
+        this.style.transform = `translate(${this.posx}px, ${this.posy}px)`;
+    }
+}
+window.customElements.define("bomb-component", Bomb);
+class Car extends HTMLElement {
+    constructor() {
+        super();
+        let foreground = document.getElementsByTagName("foreground")[0];
+        foreground.appendChild(this);
         this.posx = 100;
         this.posy = 350;
     }
-    Car.prototype.update = function () {
-        this.element.style.transform = "translate(" + this.posx + "px, " + this.posy + "px)";
-    };
-    return Car;
-}());
-var Game = (function () {
-    function Game() {
+    update() {
+        this.style.transform = `translate(${this.posx}px, ${this.posy}px)`;
+    }
+}
+window.customElements.define("car-component", Car);
+class Game {
+    constructor() {
         this.score = 0;
         this.destroyed = 0;
         this.textfield = document.getElementsByTagName("textfield")[0];
         this.statusbar = document.getElementsByTagName("bar")[0];
         this.bomb = new Bomb();
-        this.gameLoop();
     }
-    Game.prototype.gameLoop = function () {
-        var _this = this;
+    gameLoop() {
         console.log("updating the game");
-        requestAnimationFrame(function () { return _this.gameLoop(); });
-    };
-    Game.prototype.destroyBuilding = function () {
+    }
+    destroyBuilding() {
         this.destroyed++;
         console.log("buildings destroyed " + this.destroyed);
-    };
-    Game.prototype.scorePoint = function () {
+    }
+    scorePoint() {
         this.score++;
         this.textfield.innerHTML = "Score: " + this.score;
-    };
-    return Game;
-}());
-window.addEventListener("load", function () {
-    new Game();
-});
+    }
+}
+window.addEventListener("load", () => new Game());
 //# sourceMappingURL=main.js.map

@@ -1,20 +1,21 @@
-class Car {
+class Car extends HTMLElement{
     
-    private element: HTMLElement
     private posx: number
     private posy: number
         
     constructor() {
+        super()
 
-        this.element    = document.createElement("car")
         let foreground  = document.getElementsByTagName("foreground")[0]
-        foreground.appendChild(this.element);
+        foreground.appendChild(this);
         
         this.posx = 100
         this.posy = 350
     }
 
     public update():void {
-        this.element.style.transform = `translate(${this.posx}px, ${this.posy}px)`
+        this.style.transform = `translate(${this.posx}px, ${this.posy}px)`
     }
 }
+
+window.customElements.define("car-component", Car)

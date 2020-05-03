@@ -1,12 +1,10 @@
 {
     "compilerOptions": {
         "strict": true,
-        "target": "es5",
+        "target": "es6",
         "removeComments": true,
-        "noUnusedLocals": true,
         "strictPropertyInitialization": false,
         "noImplicitAny": true,
-        "noUnusedParameters": true,
         "sourceMap": true,
         "outFile": "docs/js/main.js"
     },
