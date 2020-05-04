@@ -18,4 +18,4 @@ class Car extends HTMLElement{
     }
 }
 
-window.customElements.define("car-component", Car)
+window.customElements.define("car-component", Car as any)
