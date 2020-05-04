@@ -1,21 +1,31 @@
-class Car extends HTMLElement{
-    
-    private posx: number
-    private posy: number
-        
-    constructor() {
-        super()
+///<reference path="gameObject.ts"/>
+class Car extends gameObject {
 
-        let foreground  = document.getElementsByTagName("foreground")[0]
+    constructor(gameInstance: Game) {
+        super(gameInstance);
+
+        let foreground  = document.getElementsByTagName("foreground")[0];
         foreground.appendChild(this);
-        
-        this.posx = 100
-        this.posy = 350
+
+        this.posx = this.randomInteger(-500, -1000);
+        this.posy = this.maxh - 150;
+
+
     }
 
     public update():void {
-        this.style.transform = `translate(${this.posx}px, ${this.posy}px)`
+        if (this.posx > this.maxw) {
+            this.posx = -200;
+        } else {
+            this.posx = this.posx + 5;
+        }
+
+        this.draw();
+    }
+
+    public clicked() {
+        this.gameInstance.resetBuildings();
     }
 }
 
-window.customElements.define("car-component", Car as any)
+window.customElements.define("car-component", Car as any);

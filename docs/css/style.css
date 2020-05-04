@@ -73,6 +73,35 @@ background {
 
 }
 
+gameover-wrapper{
+    z-index: 1;
+    background-color: rgba(0,0,0,.5);
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+}
+
+gameover {
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    color: red;
+    display: none;
+}
+
+finalscore {
+    z-index: 2;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    font-size: 80px;
+    display: none;
+}
+
 @keyframes movecloud {
     from {
         transform:translate(-30vw, 50px);
