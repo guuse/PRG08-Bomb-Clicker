@@ -51,7 +51,7 @@ let h = window.innerHeight
 
 Door de achtergrondafbeelding van de scorebalk naar links te verschuiven, kan je laten zien hoeveel gebouwen er kapot zijn
 ```
-this.bar.style.backgroundPositionX = "-72px"      // één kapot gebouw
+this.statusbar.style.backgroundPositionX = "-72px"      // één kapot gebouw
 ```
 
 ## OPDRACHT
