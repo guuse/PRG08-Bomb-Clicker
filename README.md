@@ -11,11 +11,6 @@ Game basics met DOM elementen en de Game Loop.
 - Laat de auto naar rechts bewegen met de gameloop
 - Laat het bommetje naar beneden bewegen met de gameloop
 
-Voorbeeldcode : positie aanpassen
-```
-this.div.style.transform=`translate(10px, 30px)`
-```
-
 ## OPDRACHT
 
 - Pas inheritance toe op de car en de bomb. Dit kun je doen met een abstracte class 'GameObject'. Op deze manier kun je afdwingen dat de child class bijvoorbeeld de functie 'update' moet hebben.
