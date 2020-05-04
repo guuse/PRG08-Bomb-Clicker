@@ -18,4 +18,4 @@ class Bomb extends HTMLElement{
     }
 }
 
-window.customElements.define("bomb-component", Bomb)
+window.customElements.define("bomb-component", Bomb as any)
